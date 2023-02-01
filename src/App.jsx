@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Contents from './components/contents'
+import Contents from './components/Contents'
 import Navigation from './components/Navigation'
 import Contact_Email from './components/Contact'
 import './index.css'
