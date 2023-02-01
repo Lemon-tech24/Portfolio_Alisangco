@@ -67,7 +67,9 @@ export default function Contents(props){
 
             {/* Resume */}
             <section style={{display: props.Resume ? 'flex': 'none'}}>
-                
+                <div className="resume-box">
+                    <img src="" alt="" />
+                </div>
             </section>
         </div>
     </>)
