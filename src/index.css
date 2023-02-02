@@ -1,3 +1,4 @@
+@import url('https://css.gg/close.css');
 :root{
     --green: #94B49F; /* RGBA(103,141,116,0.59) */
     --d-green:rgba(103,141,116,0.8);
@@ -42,12 +43,14 @@ nav{
     background-color: var(--green);
     height:10%;
     width: 100%;
+
 }
 
 .title{
     font-size: 45px;
     font-weight: 750;
     color: var(--brown);
+    z-index: 10;
 }
 
 .nav-buttons{
@@ -156,7 +159,7 @@ nav{
 
 .about-img-box{
     height: 100%;
-    width: 50%;
+    width: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -347,6 +350,134 @@ textarea{
     cursor: pointer;
 }
 
+/*RESPONSIVE NAVIGATION*/
+
+.nav-buttons-res{
+    padding:10px;
+    height:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    cursor:pointer;
+}
+
+.nav-buttons-res span{
+    width:30px;
+    height:5px;
+    background-color: var(--brown);
+    border-radius: 20px;
+}
+
+
+
+/**RESUMEEE*/
+
+.resume-box{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:100px;
+    padding: 1rem 6rem;
+    animation: toptobottom 1.5s ease;
+}
+
+.resume-box img{
+    width:50vh;
+    height: 80vh;
+    border-radius: 20px;
+    border:dashed 3px var(--brown);
+
+}
+
+.resume-box img:hover{
+    border-color: var(--max-green);
+}
+
+.resume-box a{
+    font-size: 35px;
+    color:var(--brown);
+    background-color: var(--max-green);
+    padding:10px;
+    border-radius: 15px;  
+}
+
+
+/*********NAVIGATION PANEL**********/
+
+
+.nav-panel{
+    z-index: 5;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: var(--max-green);
+    height: 100vh;
+}
+
+.nav-panel-active{
+    z-index: 5;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: var(--max-green);
+    height: 100vh;
+    animation: nav 1.2s ease;
+}
+
+
+
+@keyframes nav {
+    0%{
+        opacity: 0;
+        left:100%;
+    }
+
+    100%{
+        opacity: 1;
+     
+    }
+}
+.nav-panel li{
+    width:50%;
+    border-radius: 20px;
+    font-size: 40px;
+    color:var(--max-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    background-color: var(--brown);
+}
+
+.nav-panel-active li{
+    width:50%;
+    border-radius: 20px;
+    font-size: 40px;
+    color:var(--max-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    background-color: var(--brown);
+}
+
 
 /***************ANIMATION******************/
 
@@ -400,4 +531,502 @@ textarea{
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+
+
+/****************** RESPONSIVE ************************/
+
+
+@media(max-width:1535px) {
+    .intro-txt-box p{
+        font-size:40px;
+    }
+
+    .intro-img-box img{
+       width: 550px;
+       height: 550px;
+    }
+
+
+    .personal-txt label{
+        font-size:30px;
+    }
+
+    .personal-txt p{
+        font-size: 25px;
+    }
+
+    .techs img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-img-box img{
+        width:500px;
+        height: 500px;
+    }
+
+    .technologies label{
+        font-size: 30px;
+    }
+
+    .work-list a img{
+        width:50%;
+
+    }
+
+    .msg-box{
+        justify-content: initial;
+    }
+
+
+}
+
+@media (max-width:1360px){
+    .intro-txt-box p{
+        font-size: 35px;
+    }
+
+    .intro-img-box img{
+        width: 450px;
+        height: 450px;
+    }
+
+    .techs img{
+        width:100px;
+        height: 100px;
+    }
+}
+
+@media (max-width:1100px){
+    .intro-txt-box p{
+        font-size: 29px;
+    }
+    .intro-img-box{
+        padding:10px;
+    }
+    
+    .intro-img-box img{
+        width: 500px;
+        height: 400px;
+    }
+
+    .name, .email{
+        font-size: 28px;
+    }
+
+    textarea{   
+        font-size:30px;
+        padding:8px;
+    }
+
+    .send{
+        font-size: 35px;
+    }
+
+    .resume-box img{
+        width:45vh;
+        height: 70vh; 
+    }
+
+    .resume-box a{
+        font-size: 30px;
+    }
+}
+
+@media (max-width:970px){
+    
+    .title{
+        font-size: 40px;
+    }
+
+    .nav-buttons li a{
+        font-size: 28px;
+    }
+
+    .intro-txt-box p{
+        font-size: 25px;
+    }
+    .intro-img-box{
+        padding:8px;
+    }
+    
+    .intro-img-box img{
+        width: 400px;
+        height: 320px;
+    }
+
+    .personal-txt label{
+        font-size: 27px;
+    }
+
+    .technologies label{
+        font-size: 27px;
+    }
+
+    .personal-txt p{
+        font-size: 18px;
+    }
+    
+    .techs img{
+        width:70px;
+        height: 70px;
+    }
+
+
+    .about-img-box img{
+        width: 400px;
+        height: 400px;
+    }
+
+    .work-box p{
+        font-size: 35px;
+    }
+
+    .name, .email{
+        font-size: 25px;
+    }
+
+    textarea{   
+        font-size:28px;
+        padding:8px;
+    }
+
+    .send{
+        font-size: 32px;
+    }
+
+    .resume-box img{
+        width:42vh;
+        height: 67vh; 
+    }
+
+    .resume-box a{
+        font-size: 28px;
+    }
+}
+
+@media (max-width:810px) {
+    .contents section{
+        padding: 1rem 3rem
+    }
+
+    .contents{
+        padding:1rem
+    }
+    .title{
+        font-size: 50px;
+    }
+
+    .contents section:nth-child(1){
+        flex-direction: column;
+        padding:.2rem 1rem;
+        gap:20px;
+    }
+
+    .intro-img-box{
+        order: 1;
+        width: 100%;
+        height: 50%;
+    }
+
+    .intro-img-box img{
+        width:500px;
+        height:520px;
+    }
+
+    .intro-txt-box{
+        width: 100%;
+        order:2;
+        height: 50%;
+        align-items: flex-start;
+        padding:1rem 3rem;
+
+    }
+
+    .intro-txt-box p{
+        text-align: justify;
+        font-size: 45px;
+        font-weight: 800;
+        color:var(--max-green)
+    }
+
+
+    /**********************/
+
+    .contents section:nth-child(2){
+        flex-direction: column;
+        gap:10px;
+        padding:20px
+    }
+
+    .about-img-box{
+        order:1;
+        width: 100%;
+    }
+
+    .about-img-box img{
+        width:500px;
+        height: 460px;
+    }
+
+    .about-txt-box{
+        order: 2;
+        width:100%;
+    }
+
+    .personal-txt label{
+        font-size: 38px;
+    }
+
+   
+    .personal-txt p{
+        font-size:25px;
+        color:var(--d-green)
+    }
+    .technologies label{
+        font-size: 38px;
+    }
+
+    .techs img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .work-list a img{
+        width:100%;
+    }
+    .work-list{
+        flex-direction: column;
+    }
+
+
+    .input-box {
+        flex-direction: column;
+        
+    }
+
+    .input-box input{
+        width: 100%;
+        font-size:35px;
+    }
+
+    textarea{
+        width: 100%;
+        min-height:80% ;
+        font-size: 36px;
+    }
+
+    .contents section:last-child{
+        padding:0;
+    }
+
+    .resume-box{
+        flex-direction: column;
+        gap:30px;
+        padding:0;
+    }
+
+    .resume-box img{
+        width: 100%;
+        
+    }
+    
+}
+
+@media (max-width:670px){
+    .personal-txt p{
+        font-size: 25px;
+    }
+
+    .contents section:nth-child(2){
+        padding:5px;
+    }
+
+    .techs img{
+        width:90px;
+        height: 90px;
+    }
+    
+    .pop-box p{
+        font-size: 50px;
+    }
+    .pop-box button{
+        font-size: 35px;
+    }
+}
+
+@media (max-width:550px){
+    .intro-img-box{
+        padding:0;
+
+    }
+
+    .title{
+        font-size: 45px;
+    }
+
+    .intro-img-box img{
+        width:400px;
+        height: 380px;
+    }
+
+    .intro-txt-box{
+        padding:0;
+    }
+
+    .intro-txt-box p{
+        font-size:30px;
+    }
+
+    .about-img-box img{
+        width: 400px;
+        height: 400px;
+    }
+
+    .personal-txt p{
+        font-size: 22px;
+    }
+    .personal-txt label{
+        font-size: 35px;
+    }
+
+    .technologies label{
+        font-size: 35px;
+    }
+
+    .techs img{
+        width:75px;
+        width: 70px;
+    }
+
+    .nav-panel-active li{
+        font-size: 35px;
+    }
+
+    .input-box input{
+        font-size: 30px;
+    }
+
+    textarea{
+        font-size:32px;
+    }
+
+    .pop-box p{
+        font-size: 40px;
+
+    }
+    .pop-box button{
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width:380px) {
+    nav{
+        padding: 5px 20px;
+    }
+
+    .contents{
+        padding: 5px
+    }
+    .title{
+        font-size: 30px;
+    }
+
+    .intro-img-box img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .intro-txt-box p{
+        font-size:22px;
+    }
+
+    .nav-panel-active{
+        align-items: top;
+        justify-content: center;
+        gap:30px;
+    }
+    .nav-panel-active li{
+        font-size: 30px;
+    }
+
+    .about-img-box img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .personal-txt label{
+        font-size: 20px;
+    }
+
+    .technologies label{
+        font-size: 20px;
+    }
+
+    .personal-txt p {
+        font-size: 12px;
+    }
+
+    .techs{
+        padding:0
+    }
+
+    .techs img{
+        width: 50px;
+        height: 50px;
+    }
+    .nav-buttons-res{
+        justify-content:center ;
+        gap:5px
+    }
+    .nav-buttons-res span{
+        width: 20px;
+        height: 3px;
+    }
+
+    .contents section:nth-child(3){
+        padding:5px
+    }
+
+    .work-box p{
+        font-size: 30px;
+    }
+
+    .input-box input{
+        font-size: 20px;
+        border: dashed 2px;
+        padding:7px;
+
+    }
+
+    .send{
+        padding:10px;
+        font-size: 20px;
+    }
+
+    .contents section:nth-child(4){
+        padding:5px
+    }
+    
+    textarea{
+        border:solid 2px;
+        font-size: 18px;
+    }  
+
+    .resume-box{
+        gap:0
+    }
+
+    .resume-box img{
+        height: 75vh;
+    }
+
+    .resume-box a{
+        font-size: 20px;
+    }
+    
 }

@@ -3,8 +3,8 @@ import './../index.css'
 export default function Contents(props){
     return(<>
         <div className="contents">
-            {/* Home */}
 
+            {/* Home */}
             <section style={{display:props.Home ? 'flex' : 'none'}}>
                 <div className='intro-txt-box'>
                     <p>Hello, Welcome to my Portfolio!<br/> I'm Carl Hari Alisangco. An Inspiring Future Fullstack Developer</p>
@@ -23,7 +23,7 @@ export default function Contents(props){
                     <label>Description</label>
                         <br />
                         <br />
-                        <p>Hello There ! I'm Carl Hari Alisangco. Currently Honing my skills and taking Bachelor of Science Degree in Information Technology at RTU (Rizal Technological University) Boni Campus. I still have long way to go, So goodluck to me :D</p>
+                        <p>Hello There! I'm Carl Hari Alisangco. Currently Honing my skills and taking Bachelor of Science Degree in Information Technology at RTU (Rizal Technological University) Boni Campus. I still have long way to go, So goodluck to me :D</p>
                     </div>
                     
                     <div className="technologies">
@@ -68,7 +68,8 @@ export default function Contents(props){
             {/* Resume */}
             <section style={{display: props.Resume ? 'flex': 'none'}}>
                 <div className="resume-box">
-                    <img src="" alt="" />
+                    <img src="Resume.jpg"/>
+                    <a href="Resume.pdf" download>Download</a>
                 </div>
             </section>
         </div>
