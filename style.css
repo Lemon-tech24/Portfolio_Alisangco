@@ -543,6 +543,9 @@ textarea{
         order:1;
     }
     
+    .section-2 {
+        height: 60vh;
+    }
     .description div p{
         font-size: 12px;
     }
