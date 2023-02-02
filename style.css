@@ -7,7 +7,6 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
- 
 }
 
 html, body{
@@ -94,7 +93,9 @@ nav ul li a{
 }
 
 .side-nav ul li a{
-    color:var(--green)
+    color:var(--green);
+
+    font-size: 25px;
 }
 
 section{
@@ -352,6 +353,8 @@ textarea{
         left: 0;
     }
 
+
+    
 }
 
 
@@ -493,7 +496,7 @@ textarea{
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-     
+        
     }
     .description, .technology{
         width: 100%;
@@ -513,6 +516,10 @@ textarea{
     .project-1 a img{
         width:300px;
         
+    }
+
+    .btn-submit{
+        margin-top:10px
     }
 }
 
@@ -559,6 +566,12 @@ textarea{
         width: 40px;
         height: 40px;
     }
+
+    .msg{
+        margin:0;
+    }
+
+    
 }
 
 
