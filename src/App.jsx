@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useRef, useState, useEffect } from 'react'
+=======
+import { useState } from 'react'
+>>>>>>> c81a9eaeaa37db55f30eb9d0d577f17a44e98d77
 import Contents from './components/Contents'
 import Navigation from './components/Navigation'
 import Contact_Email from './components/Contact'
