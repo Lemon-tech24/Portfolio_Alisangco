@@ -1,13 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="style.css">
+
+    <script src="main.js" defer></script>
+    <title>Portfolio | Alisangco</title>
+   
+</head>
+<body>
+    <nav>
+   
+        <header><a href="">Carl Hari</a></header>
+
+        <ul class="items">
+            <li><a href="#section-1" >Home</a></li>
+            <li><a href="#section-2">About</a></li>
+            <li><a href="#section-3">Projects</a></li>
+            <li><a href="#section-4">Contact</a></li>
+        </ul>
+        
+        <div class="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="side-nav">
+        <ul>
+            <li><a href="#section-1" class="side-nav-items">Home</a></li>
+            <li><a href="#section-2" class="side-nav-items">About</a></li>
+            <li><a href="#section-3" class="side-nav-items">Projects</a></li>
+            <li><a href="#section-4" class="side-nav-items">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <section class="section-1" id="section-1">
+        <p class="intro-txt">Hello I'm Alisangco, Carl Hari A.<br>Inspiring Fullstack Developer</p>
+        <img src="./assets/profile.jpg" alt="">
+    </section>
+<!-------------------------------------------------------------------->
+    <section class="section-2" id="section-2">
+           <div class="description">
+                <p>About Me</p>
+                <div>
+                    <p>Hello There! I'm Carl Hari Alisangco. Currently Honing my skills and taking Bachelor of Science Degree in Information Technology at RTU (Rizal Technological University) Boni Campus. I still have long way to go, So goodluck to me :D</p>
+                    <a href="./assets/Resume.pdf" download="">Download Resume</a>
+                </div>
+           </div>
+
+           <div class="technology">
+                <p>Technologies</p>
+
+               <div class="tech-list">
+                    <img src="./assets/html.png">
+                    <img src="./assets/css.png">
+                    <img src="./assets/js.png">
+                    <img src="./assets/tailwind.png">
+                    <img src="./assets/node.png">
+                    <img src="./assets/php.png">
+                    <img src="./assets/python.png">
+                    <img src="./assets/react.png">
+                    <img src="./assets/html.png">
+               </div>
+           </div>
+    </section>
+<!-------------------------------------------------------------------->
+    <section class="section-3" id="section-3">
+            <div class="project-1">
+               <a href="https://github.com/carlalisangco/Todo-App-PHP-oop" target="_blank"><img src="./assets/project1.png" alt=""></a>
+            </div>
+
+            <div class="project-2">
+                OS Web App In progress
+            </div>
+            <div class="project-3">
+                Chat Application Soon
+            </div>
+    </section>
+<!-------------------------------------------------------------------->
+    <section class="section-4" id="section-4">
+            <div class="message">
+                <div class="msg-box">
+                    <input class= "nameF" type="text" placeholder="Type your Name" required>
+                    <input class = "email" type="text" placeholder="Type your Email." required>
+                </div>
+                <textarea class = "msg" type ="text" placeholder="Message Here."></textarea>
+                <button class = "btn-submit" type="submit" onclick="sendMsg()" >Send</button>
+            </div>
+
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script type="text/javascript">
+               
+                
+                
+                (function(){
+                    emailjs.init("57KNmk21agGBbv-j1");
+                })();
+
+                const email = document.querySelector('.email')
+                const msg = document.querySelector('.msg')
+                const nameF = document.querySelector('.nameF')
+
+                function sendMsg(e){
+                    var tempParams= {
+                        user_name: nameF.value,
+                        user_email: email.value,
+                        message: msg.value
+                    };
+                    
+                    msg.value=''
+                    email.value=''
+                    
+                    emailjs.send('service_83wdyuk','template_5109ji8',tempParams).then(alert('Send successfully')) 
+                    
+                }
+               
+
+        
+
+            </script>
+
+
+            
+    </section>
+
+   
+
+    
+<!-------------------------------------------------------------------->
+</body>
+<section class = "footer">
+    @Copyright Reserved 2023 | Alisangco, Carl Hari A.
+
+    <div class="links">
+
+    </div>
+</section>
 </html>
