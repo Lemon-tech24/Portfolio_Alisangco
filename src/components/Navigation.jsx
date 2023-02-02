@@ -20,7 +20,7 @@ export default function Navigation(props){
             </div>
 
           
-            <div className={active === 'active' ? 'nav-panel-active':'nav-panel'} style={{display:props.ActiveNav ? 'flex':'none'  ,transition:'1s'}}>
+            <div className={active === 'active' ? 'nav-panel-active':'nav-panel'} style={{display:props.ActiveNav ? 'flex':'none'   }}>
                 <li><a  onClick={props.handleAbout}>About</a></li>
                 <li><a  onClick={props.handleWorks}>Works</a></li>
                 <li><a  onClick={props.handleContact}>Contact</a></li>
